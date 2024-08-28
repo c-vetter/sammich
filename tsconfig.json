@@ -1,0 +1,16 @@
+{
+	"extends": "@tsconfig/node20/tsconfig.json",
+	"compilerOptions": {
+		"jsx": "react-jsx",
+		"jsxImportSource": "preact",
+		"target": "ESNext",
+		"module": "NodeNext",
+		"moduleResolution": "NodeNext",
+		"paths": {
+			"ti18n": ["./src/main.ts"],
+		},
+		"outDir": "-transpiled",
+		"declaration": true,
+	},
+	"include": [ "src" ],
+}

@@ -128,3 +128,13 @@ dist
 .yarn/build-state.yml
 .yarn/install-state.gz
 .pnp.*
+
+# tsimp
+.tsimp
+
+# transient files
+-*
+
+# build output
+*.js
+*.d.ts
