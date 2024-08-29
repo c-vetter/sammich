@@ -1,10 +1,10 @@
-import { type Ti18nConfig } from "ti18n"
+import { type SammichConfig } from "sammich"
 
-const ti18nConfig : Ti18nConfig = {
+const sammichConfig : SammichConfig = {
 	path: `./path/to/translations`,
 	locales: [`de-de`, `de-ch`, `de-at`],
 	dynamic: true,
 	importWithoutExtension: true,
 }
 
-export default ti18nConfig
+export default sammichConfig

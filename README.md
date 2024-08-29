@@ -1,9 +1,5 @@
-<img title="ti18n" src="./ti18n.svg" style="width: 30%; float: right; margin: 0 0 1em 1em; position: relative; z-index: 1"/>
-
-# ti18n 
-Pronounced as “TITAN” (yes, you should definitely shout every time you talk about ti18n 😉).
-
-Main features:
+# sammich 
+Typesafe UI internationalization, done right:
 + 0kb runtime weight
 + 0ms build-time overhead
 + instead of mere string interpolation, do anything you can code
@@ -15,12 +11,13 @@ Main features:
 		- [--jsx](#--jsx)
 		- [--omit-ext](#--omit-ext)
 - [What does it do, how does it work?](#what-does-it-do-how-does-it-work)
+- [What's with the name?](#whats-with-the-name)
 
 --------
 
 ## Usage
 ```sh
-npx ti18n path/to/i18n [--dynamic] [--jsx] [--omit-ext] --- en de fr
+npx sammich path/to/i18n [--dynamic] [--jsx] [--omit-ext] --- en de fr
 ```
 Note the **triple** dash to work around `npx`'s arguments handling. Alternatively, use two double dashes.
 
@@ -52,7 +49,14 @@ Generate extension-less imports.
 By default, the imports use `.js`/`.jsx` file extensions, as per [TypeScript defaults](https://www.typescriptlang.org/docs/handbook/modules/reference.html).
 
 ## What does it do, how does it work?
-TypeScript does the heavy lifting, `ti18n` is just a little helper to set you up correctly.
+TypeScript does the heavy lifting, `sammich` is just a little helper to set you up correctly.
 
 You could easily do all this without a package, there is no runtime dependency because nobody needs that.
 This package exists to take care of boilerplate, enhance ease of repetition, and documentation.
+
+## What's with the name?
+A sandwich is simple but nourishing and you can [have it your way in almost every way](https://en.wikipedia.org/wiki/Sandwich#Gallery). You need nothing special for it – some bread and whatever you like to put in the middle.
+
+A sammich, [as the UD tells us](https://www.urbandictionary.com/define.php?term=sammich), is a sandwich done *just right*.
+
+`sammich` gives you the same features for UI internationalization.

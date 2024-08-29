@@ -1,8 +1,8 @@
 import { outdent } from "outdent";
-import { Ti18nConfigInternal } from "./buildConfig.js";
+import { SammichConfigInternal } from "./buildConfig.js";
 import { FileObject } from "./writeFiles.js";
 
-export function buildFileLocale (config: Ti18nConfigInternal, locale: string) : FileObject {
+export function buildFileLocale (config: SammichConfigInternal, locale: string) : FileObject {
 	const extension = config.jsx ? `tsx` : `ts`
 
 	return {
@@ -19,7 +19,7 @@ export function buildFileLocale (config: Ti18nConfigInternal, locale: string) : 
 	}
 }
 
-function buildFileLocaleDefault (config: Ti18nConfigInternal, locale: string) {
+function buildFileLocaleDefault (config: SammichConfigInternal, locale: string) {
 	const {
 		sample,
 		tokenConst,
@@ -48,7 +48,7 @@ function buildFileLocaleDefault (config: Ti18nConfigInternal, locale: string) {
 	`
 }
 
-function buildFileLocaleExtension (config: Ti18nConfigInternal, locale: string) {
+function buildFileLocaleExtension (config: SammichConfigInternal, locale: string) {
 	const {
 		extensionImport,
 		localeDefault,

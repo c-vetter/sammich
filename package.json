@@ -1,9 +1,11 @@
 {
-	"name": "ti18n",
+	"name": "sammich",
 	"version": "1.0.0",
-	"description": "typesafe UI internationalization, done right, at 0kb runtime weight",
+	"description": "typesafe UI internationalization, done right, with 0 overhead",
 	"type": "module",
-	"bin": "bin.js",
+	"bin": {
+		"sammich": "bin.js"
+	},
 	"main": "main.js",
 	"types": "types.d.ts",
 	"files": [
@@ -19,21 +21,19 @@
 	},
 	"repository": {
 		"type": "git",
-		"url": "git+ssh://git@github.com/c-vetter/ti18n.git"
+		"url": "git+ssh://git@github.com/c-vetter/sammich.git"
 	},
 	"keywords": [
 		"TypeScript",
 		"i18n",
-		"internationalization",
-		"preact",
-		"react"
+		"internationalization"
 	],
 	"author": "c-vetter",
 	"license": "MIT",
 	"bugs": {
-		"url": "https://github.com/c-vetter/ti18n/issues"
+		"url": "https://github.com/c-vetter/sammich/issues"
 	},
-	"homepage": "https://github.com/c-vetter/ti18n#readme",
+	"homepage": "https://github.com/c-vetter/sammich#readme",
 	"dependencies": {
 		"case-anything": "^3.1.0",
 		"minimist": "^1.2.8",

@@ -5,29 +5,29 @@ import test from "ava"
 import fsExtra from "fs-extra"
 import readdirp from "readdirp"
 
-import { ti18n } from "./main.js"
+import { sammich } from "./main.js"
 
 const { copy, emptyDir, readFile, readdirSync } = fsExtra
 
 test(`minimum data`, async t => {
 	await Promise.all([
 		// @ts-expect-error
-		t.throwsAsync(async () => await ti18n()),
+		t.throwsAsync(async () => await sammich()),
 		// @ts-expect-error
-		t.throwsAsync(async () => await ti18n({})),
+		t.throwsAsync(async () => await sammich({})),
 		// @ts-expect-error
-		t.throwsAsync(async () => await ti18n({
+		t.throwsAsync(async () => await sammich({
 			path: ``,
 		})),
 		// @ts-expect-error
-		t.throwsAsync(async () => await ti18n({
+		t.throwsAsync(async () => await sammich({
 			locales: [],
 		})),
 		// @ts-expect-error
-		t.throwsAsync(async () => await ti18n({
+		t.throwsAsync(async () => await sammich({
 			locales: [`en`],
 		})),
-		t.throwsAsync(async () => await ti18n({
+		t.throwsAsync(async () => await sammich({
 			path: ``,
 			locales: []
 		})),
@@ -50,10 +50,10 @@ for (const dirCase of readdirSync(dirTests)) {
 
 		await copy(dirArrange(dirCase), dirAct(dirCase))
 
-		const { default: config } = await import(`file:` + dirAct(dirCase, `ti18nconfig.ts`))
+		const { default: config } = await import(`file:` + dirAct(dirCase, `sammichconfig.ts`))
 		config.path = dirAct(dirCase, config.path)
 
-		await ti18n(config)
+		await sammich(config)
 
 		t.deepEqual(...(
 			await Promise.all([

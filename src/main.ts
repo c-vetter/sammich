@@ -1,11 +1,11 @@
-import { buildConfig, Ti18nConfig } from "./buildConfig.js"
+import { buildConfig, SammichConfig } from "./buildConfig.js"
 import { buildFileLocale } from "./buildFileLocale.js"
 import { buildFileSwitch } from "./buildFileSwitch.js"
 import { writeFiles } from "./writeFiles.js"
 
-export type { Ti18nConfig } from "./buildConfig.js"
+export type { SammichConfig } from "./buildConfig.js"
 
-export async function ti18n (configExternal: Ti18nConfig) {
+export async function sammich (configExternal: SammichConfig) {
 	const config = buildConfig(configExternal)
 
 	const fileSwitch = buildFileSwitch(config)

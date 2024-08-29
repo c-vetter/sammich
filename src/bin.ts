@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 
 import minimist from "minimist"
-import { ti18n } from "./main.js";
+import { sammich } from "./main.js";
 
 const argv = minimist(
 	process.argv
@@ -14,7 +14,7 @@ const argv = minimist(
 	}
 )
 
-ti18n({
+sammich({
 	path: argv._[0],
 	locales: argv["--"] as Array<string>,
 	dynamic: Boolean(argv.dynamic),

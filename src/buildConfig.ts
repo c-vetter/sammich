@@ -2,7 +2,7 @@ import { basename, join, resolve } from "node:path"
 import { camelCase, pascalCase } from "case-anything"
 import { outdent } from "outdent"
 
-export type Ti18nConfig = {
+export type SammichConfig = {
 	readonly path: string
 	readonly dynamic?: boolean
 	readonly importWithoutExtension?: boolean
@@ -12,7 +12,7 @@ export type Ti18nConfig = {
 	// readonly integration?: `none` | `preact` | `react`
 }
 
-export type Ti18nConfigInternal = {
+export type SammichConfigInternal = {
 	readonly dynamic: boolean
 	readonly extensionImport: string
 	readonly jsx: boolean
@@ -25,7 +25,7 @@ export type Ti18nConfigInternal = {
 	readonly tokenType: string
 }
 
-export function buildConfig (config: Ti18nConfig): Ti18nConfigInternal {
+export function buildConfig (config: SammichConfig): SammichConfigInternal {
 	if (!config.path) {
 		throw new Error(`path must be a non-empty string`)
 	}

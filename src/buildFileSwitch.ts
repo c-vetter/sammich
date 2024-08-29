@@ -1,8 +1,8 @@
 import { outdent } from "outdent";
-import { Ti18nConfigInternal } from "./buildConfig.js";
+import { SammichConfigInternal } from "./buildConfig.js";
 import { camelCase } from "case-anything";
 
-export function buildFileSwitch (config: Ti18nConfigInternal) {
+export function buildFileSwitch (config: SammichConfigInternal) {
 	const typeLocales = (
 		config.localesAll
 		.map(l => `\`${l}\``)
@@ -23,7 +23,7 @@ export function buildFileSwitch (config: Ti18nConfigInternal) {
 	}
 }
 
-function buildFileSwitchDynamic ({ extensionImport, localesAll, tokenConst } : Ti18nConfigInternal, typeLocales: string) {
+function buildFileSwitchDynamic ({ extensionImport, localesAll, tokenConst } : SammichConfigInternal, typeLocales: string) {
 	const tokenImport = camelCase(`import ${tokenConst}`)
 
 	return outdent`
@@ -49,7 +49,7 @@ function buildFileSwitchDynamic ({ extensionImport, localesAll, tokenConst } : T
 	`
 }
 
-function buildFileSwitchStatic ({ extensionImport, localesAll, tokenConst } : Ti18nConfigInternal, typeLocales: string) {
+function buildFileSwitchStatic ({ extensionImport, localesAll, tokenConst } : SammichConfigInternal, typeLocales: string) {
 	return outdent`
 		${
 			localesAll
